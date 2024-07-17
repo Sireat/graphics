@@ -1,0 +1,803 @@
+<canvas id="view"></canvas>
+<script>
+
+
+var vw = document.getElementById("view");
+var ctx = vw.getContext("2d");
+var w = vw.width=window.innerWidth;
+var h=vw.height=window.innerHeight;
+ctx.fillStyle = "red";
+ctx.fill();
+ctx.stroke();
+
+var starSize = 100; // Size of each inner star
+var outerStarX = 600; // X-coordinate of the center of the outer star
+var outerStarY = 0; // Y-coordinate of the center of the outer star
+
+// Function to draw a star
+function drawStar(ctx, x, y, radius, points, inset) {
+  ctx.beginPath();
+  ctx.moveTo(x, y - radius);
+  for (var i = 0; i < points; i++) {
+    ctx.lineTo(
+      x + Math.cos(((i * 2 * Math.PI) / points) - Math.PI / 2) * radius,
+      y + Math.sin(((i * 2 * Math.PI) / points) - Math.PI / 2) * radius
+    );
+    ctx.lineTo(
+      x + Math.cos(((i * 2 * Math.PI) / points + Math.PI / points) - Math.PI / 2) * (radius * inset),
+      y + Math.sin(((i * 2 * Math.PI) / points + Math.PI / points) - Math.PI / 2) * (radius * inset)
+    );
+  }
+  ctx.closePath();
+}
+
+// Draw inner stars
+for (var i = 0; i < 5; i++) {
+  // Set the color for each star
+  var color;
+  if (i === 0) color = "yellow";
+  else if (i === 1 || i === 3 || i === 4) color = "white";
+  else if (i === 2) color = "purple";
+  
+  ctx.strokeStyle = color;
+
+  // Draw the star
+  drawStar(ctx, outerStarX, outerStarY, starSize / 2, 5, 0.5);
+  ctx.lineWidth = 10; // Adjust line width as needed
+  ctx.stroke();
+  
+  starSize -= 30; // Reduce the size for the next inner star
+}
+
+
+
+var diamondSize = 100; // Size of each inner star
+var outerDiamondX = 600; // X-coordinate of the center of the outer star
+var outerDiamondY = 110; // Y-coordinate of the center of the outer star
+
+// Function to draw a star
+function drawStar(ctx, x, y, radius, points, inset) {
+  ctx.beginPath();
+  ctx.moveTo(x, y - radius);
+  for (var i = 0; i < points; i++) {
+    ctx.lineTo(
+      x + Math.cos(((i * 2 * Math.PI) / points) - Math.PI / 2) * radius,
+      y + Math.sin(((i * 2 * Math.PI) / points) - Math.PI / 2) * radius
+    );
+    ctx.lineTo(
+      x + Math.cos(((i * 2 * Math.PI) / points + Math.PI / points) - Math.PI / 2) * (radius * inset),
+      y + Math.sin(((i * 2 * Math.PI) / points + Math.PI / points) - Math.PI / 2) * (radius * inset)
+    );
+  }
+  ctx.closePath();
+}
+
+// Draw inner stars
+for (var i = 0; i < 5; i++) {
+  // Set the color for each star
+  var color;
+  if (i === 0) color = "brown";
+  else if (i === 1) color = "yellow";
+  else if (i === 2) color = "purple";
+  else if (i === 3) color = "white";
+  else if (i === 4) color = "blue";
+  
+  ctx.fillStyle = color;
+
+  // Draw the star
+  drawStar(ctx, outerDiamondX, outerDiamondY, diamondSize / 2, 5, 0.5);
+  ctx.fill();
+  
+  diamondSize -= 20; // Reduce the size for the next inner star
+}
+
+
+var diamondSize = 100; // Size of each inner star
+var outerDiamondX = 600; // X-coordinate of the center of the outer star
+var outerDiamondY = 210; // Y-coordinate of the center of the outer star
+
+// Function to draw a star
+function drawStar(ctx, x, y, radius, points, inset) {
+  ctx.beginPath();
+  for (var i = 0; i < points; i++) {
+    ctx.lineTo(
+      x + radius * Math.cos((i * 2 * Math.PI) / points - Math.PI / 2),
+      y + radius * Math.sin((i * 2 * Math.PI) / points - Math.PI / 2)
+    );
+    ctx.lineTo(
+      x + inset * radius * Math.cos((i * 2 * Math.PI) / points + Math.PI / points - Math.PI / 2),
+      y + inset * radius * Math.sin((i * 2 * Math.PI) / points + Math.PI / points - Math.PI / 2)
+    );
+  }
+  ctx.closePath();
+}
+
+// Draw inner stars
+for (var i = 0; i < 5; i++) {
+  // Set the color for each star
+  var color;
+  if (i === 0) color = "yellow";
+  else if (i === 1) color = "red";
+  else if (i === 2) color = "purple";
+  else if (i === 3) color = "white";
+  else if (i === 4) color = "blue";
+  
+  ctx.fillStyle = color;
+
+  // Draw the star
+  drawStar(ctx, outerDiamondX, outerDiamondY, diamondSize / 2, 5, 0.5);
+  ctx.fill();
+  
+  diamondSize -= 20; // Reduce the size for the next inner star
+}
+
+
+
+// ctx.closePath();
+// ctx.beginPath();
+// ctx.beginPath();
+// ctx.moveTo(600, 140);
+// ctx.quadraticCurveTo(700, 190, 600, 240);
+// ctx.quadraticCurveTo(500, 190, 600, 140);
+// ctx.closePath();
+
+// ;;;;;;
+
+// ctx.fillStyle = "white";
+// ctx.fill();
+// ctx.stroke();
+
+
+
+
+
+var diamondSize = 100; // Size of each inner star
+var outerDiamondX = 600; // X-coordinate of the center of the outer star
+var outerDiamondY = 310; // Y-coordinate of the center of the outer star
+
+// Function to draw a star
+function drawStar(ctx, x, y, radius, points, inset) {
+  ctx.beginPath();
+  for (var i = 0; i < points; i++) {
+    ctx.lineTo(
+      x + radius * Math.cos((i * 2 * Math.PI) / points - Math.PI / 2),
+      y + radius * Math.sin((i * 2 * Math.PI) / points - Math.PI / 2)
+    );
+    ctx.lineTo(
+      x + inset * radius * Math.cos((i * 2 * Math.PI) / points + Math.PI / points - Math.PI / 2),
+      y + inset * radius * Math.sin((i * 2 * Math.PI) / points + Math.PI / points - Math.PI / 2)
+    );
+  }
+  ctx.closePath();
+}
+
+// Draw inner stars
+for (var i = 0; i < 5; i++) {
+  // Set the color for each star
+  var color;
+  if (i === 0) color = "yellow";
+  else if (i === 1) color = "red";
+  else if (i === 2) color = "purple";
+  else if (i === 3) color = "white";
+  else if (i === 4) color = "blue";
+  
+  ctx.fillStyle = color;
+
+  // Draw the star
+  drawStar(ctx, outerDiamondX, outerDiamondY, diamondSize / 2, 5, 0.5);
+  ctx.fill();
+  
+  diamondSize -= 20; // Reduce the size for the next inner star
+}
+
+var starSize = 100; // Size of each inner star
+var outerStarX = 600; // X-coordinate of the center of the outer star
+var outerStarY = 510; // Y-coordinate of the center of the outer star
+
+// Function to draw a star
+function drawStar(ctx, x, y, radius, points, inset) {
+  ctx.beginPath();
+  for (var i = 0; i < points; i++) {
+    ctx.lineTo(
+      x + radius * Math.cos((i * 2 * Math.PI) / points - Math.PI / 2),
+      y + radius * Math.sin((i * 2 * Math.PI) / points - Math.PI / 2)
+    );
+    ctx.lineTo(
+      x + inset * radius * Math.cos((i * 2 * Math.PI) / points + Math.PI / points - Math.PI / 2),
+      y + inset * radius * Math.sin((i * 2 * Math.PI) / points + Math.PI / points - Math.PI / 2)
+    );
+  }
+  ctx.closePath();
+}
+
+// Draw inner stars
+for (var i = 0; i < 5; i++) {
+  // Set the color for each star
+  var color;
+  if (i === 0) color = "yellow";
+  else if (i === 1) color = "red";
+  else if (i === 2) color = "purple";
+  else if (i === 3) color = "white";
+  else if (i === 4) color = "blue";
+  
+  ctx.fillStyle = color;
+
+  // Draw the star
+  drawStar(ctx, outerStarX, outerStarY, starSize / 2, 5, 0.5);
+  ctx.fill();
+  
+  starSize -= 20; // Reduce the size for the next inner star
+}
+
+var starSize = 100; // Size of each inner star
+var outerStarX = 600; // X-coordinate of the center of the outer star
+var outerStarY = 610; // Y-coordinate of the center of the outer star
+
+// Function to draw a star
+function drawStar(ctx, x, y, radius, points, inset) {
+  ctx.beginPath();
+  ctx.moveTo(x + radius * Math.cos(0), y + radius * Math.sin(0));
+  for (var i = 0; i < points * 2; i++) {
+    var angle = Math.PI / points * i;
+    var radius = i % 2 === 0 ? radius : radius * inset;
+    ctx.lineTo(x + radius * Math.cos(angle), y + radius * Math.sin(angle));
+  }
+  ctx.closePath();
+}
+
+
+// Draw inner stars
+for (var i = 0; i < 5; i++) {
+  // Set the color for each star
+  var color;
+  if (i === 0) color = "yellow";
+  else if (i === 1) color = "red";
+  else if (i === 2) color = "purple";
+  else if (i === 3) color = "white";
+  else if (i === 4) color = "blue";
+  
+  ctx.fillStyle = color;
+
+  // Draw the star
+  drawStar(ctx, outerStarX, outerStarY, starSize / 2, 5, 0.5);
+  ctx.fill();
+  
+  starSize -= 20; // Reduce the size for the next inner star
+}
+var starSize = 100; // Size of each inner star
+var outerStarX = 600; // X-coordinate of the center of the outer star
+var outerStarY = 410; // Y-coordinate of the center of the outer star
+
+// Function to draw a star
+function drawStar(ctx, x, y, radius, points, inset) {
+  ctx.beginPath();
+  for (var i = 0; i < points; i++) {
+    var angle = (i * 2 * Math.PI) / points - Math.PI / 2;
+    var outerX = x + radius * Math.cos(angle);
+    var outerY = y + radius * Math.sin(angle);
+    ctx.lineTo(outerX, outerY);
+
+    angle += Math.PI / points;
+    var innerX = x + inset * radius * Math.cos(angle);
+    var innerY = y + inset * radius * Math.sin(angle);
+    ctx.lineTo(innerX, innerY);
+  }
+  ctx.closePath();
+}
+
+// Draw inner stars
+for (var i = 0; i < 5; i++) {
+  // Set the color for each star
+  var color;
+  if (i === 0) color = "yellow";
+  else if (i === 1) color = "red";
+  else if (i === 2) color = "purple";
+  else if (i === 3) color = "white";
+  else if (i === 4) color = "blue";
+  
+  ctx.fillStyle = color;
+
+  // Draw the star
+  drawStar(ctx, outerStarX, outerStarY, starSize / 2, 5, 0.5);
+  ctx.fill();
+  
+  starSize -= 20; // Reduce the size for the next inner star
+}
+
+
+
+var crossSize1 = 100; // Size of the first cross
+var outerCrossX1 = 600; // X-coordinate of the center of the first cross
+var outerCrossY1 = 910; // Y-coordinate of the center of the first cross
+
+for (var i = 0; i < 5; i++) {
+  ctx.beginPath();
+  
+  // Draw the vertical and horizontal lines of the first cross
+  ctx.moveTo(outerCrossX1, outerCrossY1 - crossSize1 / 2);
+  ctx.lineTo(outerCrossX1, outerCrossY1 + crossSize1 / 2);
+  
+  ctx.moveTo(outerCrossX1 - crossSize1 / 2, outerCrossY1);
+  ctx.lineTo(outerCrossX1 + crossSize1 / 2, outerCrossY1);
+
+  ctx.closePath();
+  
+  // Fill each section of the first cross with a different color
+  var color;
+  if (i === 0 || i === 1 || i === 2) color = "yellow";
+  else if (i === 3) color = "red";
+  else if (i === 4) color = "blue";
+
+  ctx.strokeStyle = color;
+  ctx.lineWidth = 10; // Adjust line width as needed
+  ctx.stroke();
+  
+  crossSize1 -= 20; // Reduce the size for the next inner cross section
+}
+
+// Second Cross
+var crossSize2 = 100; // Size of the second cross
+var outerCrossX2 = 900; // X-coordinate of the center of the second cross
+var outerCrossY2 = 0; // Y-coordinate of the center of the second cross
+
+for (var i = 0; i < 5; i++) {
+  ctx.beginPath();
+  
+  // Draw the vertical and horizontal lines of the second cross
+  ctx.moveTo(outerCrossX2, outerCrossY2 - crossSize2 / 2);
+  ctx.lineTo(outerCrossX2, outerCrossY2 + crossSize2 / 2);
+  
+  ctx.moveTo(outerCrossX2 - crossSize2 / 2, outerCrossY2);
+  ctx.lineTo(outerCrossX2 + crossSize2 / 2, outerCrossY2);
+
+  ctx.closePath();
+  
+  // Fill each section of the second cross with a different color
+  var color;
+  if (i === 0 || i === 1 || i === 2) color = "purple";
+  else if (i === 3) color = "black";
+  else if (i === 4) color = "white";
+
+  ctx.strokeStyle = color;
+  ctx.lineWidth = 10; // Adjust line width as needed
+  ctx.stroke();
+  
+  crossSize2 -= 10; // Reduce the size for the next inner cross section
+}
+
+
+var crossSize = 100; // Size of each section of the cross
+var outerCrossX = 900; // X-coordinate of the center of the cross
+var outerCrossY = 110; // Y-coordinate of the center of the cross
+
+// Draw the cross
+for (var i = 0; i < 5; i++) {
+  ctx.beginPath();
+  
+  // Draw the vertical and horizontal lines of the cross
+  ctx.moveTo(outerCrossX, outerCrossY - crossSize / 2);
+  ctx.lineTo(outerCrossX, outerCrossY + crossSize / 2);
+  
+  ctx.moveTo(outerCrossX - crossSize / 2, outerCrossY);
+  ctx.lineTo(outerCrossX + crossSize / 2, outerCrossY);
+
+  ctx.closePath();
+  
+  // Fill each section of the cross with a different color
+  var color;
+  if (i === 0) color = "green";
+  else if (i === 1) color = "green";
+  else if (i === 2) color = "red";
+  else if (i === 3) color = "green";
+  else if (i === 4) color = "green";
+
+  ctx.strokeStyle = color;
+  ctx.lineWidth = 10; // Adjust line width as needed
+  ctx.stroke();
+  
+  crossSize -= 10; // Reduce the size for the next inner cross section
+}
+
+
+var crossSize = 100; // Size of each section of the cross
+var outerCrossX = 900; // X-coordinate of the center of the cross
+var outerCrossY = 210; // Y-coordinate of the center of the cross
+
+// Draw the cross
+for (var i = 0; i < 5; i++) {
+  ctx.beginPath();
+  
+  // Draw the vertical and horizontal lines of the cross
+  ctx.moveTo(outerCrossX, outerCrossY - crossSize / 2);
+  ctx.lineTo(outerCrossX, outerCrossY + crossSize / 2);
+  
+  ctx.moveTo(outerCrossX - crossSize / 2, outerCrossY);
+  ctx.lineTo(outerCrossX + crossSize / 2, outerCrossY);
+
+  ctx.closePath();
+  
+  // Fill each section of the cross with a different color
+  var color;
+  if (i === 0) color = "green";
+  else if (i === 1) color = "yellow";
+  else if (i === 2) color = "red";
+  else if (i === 3) color = "green";
+  else if (i === 4) color = "yellow";
+
+  ctx.strokeStyle = color;
+  ctx.lineWidth = 10; // Adjust line width as needed
+  ctx.stroke();
+  
+  crossSize -= 10; // Reduce the size for the next inner cross section
+}
+
+
+// ctx.closePath();
+// ctx.beginPath();
+// ctx.beginPath();
+// ctx.moveTo(600, 140);
+// ctx.quadraticCurveTo(700, 190, 600, 240);
+// ctx.quadraticCurveTo(500, 190, 600, 140);
+// ctx.closePath();
+
+//;;;;;;
+
+// ctx.fillStyle = "red";
+// ctx.fill();
+// ctx.stroke();
+
+
+
+
+var crossSize = 100; // Size of each section of the cross
+var outerCrossX = 900; // X-coordinate of the center of the cross
+var outerCrossY = 310; // Y-coordinate of the center of the cross
+
+// Draw the cross
+for (var i = 0; i < 5; i++) {
+  ctx.beginPath();
+  
+  // Draw the vertical and horizontal lines of the cross
+  ctx.moveTo(outerCrossX, outerCrossY - crossSize / 2);
+  ctx.lineTo(outerCrossX, outerCrossY + crossSize / 2);
+  
+  ctx.moveTo(outerCrossX - crossSize / 2, outerCrossY);
+  ctx.lineTo(outerCrossX + crossSize / 2, outerCrossY);
+
+  ctx.closePath();
+  
+  // Fill each section of the cross with a different color
+  var color;
+  if (i === 0) color = "green";
+  else if (i === 1) color = "red";
+  else if (i === 2) color = "red";
+  else if (i === 3) color = "red";
+  else if (i === 4) color = "red";
+
+  ctx.strokeStyle = color;
+  ctx.lineWidth = 10; // Adjust line width as needed
+  ctx.stroke();
+  
+  crossSize -= 10; // Reduce the size for the next inner cross section
+}
+
+var crossSize = 100; // Size of each section of the cross
+var outerCrossX = 900; // X-coordinate of the center of the cross
+var outerCrossY = 410; // Y-coordinate of the center of the cross
+
+// Draw the cross
+for (var i = 0; i < 5; i++) {
+  ctx.beginPath();
+  
+  // Draw the vertical and horizontal lines of the cross
+  ctx.moveTo(outerCrossX, outerCrossY - crossSize / 2);
+  ctx.lineTo(outerCrossX, outerCrossY + crossSize / 2);
+  
+  ctx.moveTo(outerCrossX - crossSize / 2, outerCrossY);
+  ctx.lineTo(outerCrossX + crossSize / 2, outerCrossY);
+
+  ctx.closePath();
+  
+  // Fill each section of the cross with a different color
+  var color;
+  if (i === 0) color = "green";
+  else if (i === 1) color = "green";
+  else if (i === 2) color = "red";
+  else if (i === 3) color = "green";
+  else if (i === 4) color = "green";
+
+  ctx.strokeStyle = color;
+  ctx.lineWidth = 10; // Adjust line width as needed
+  ctx.stroke();
+  
+  crossSize -= 10; // Reduce the size for the next inner cross section
+}
+
+var crossSize = 100; // Size of each section of the cross
+var outerCrossX = 900; // X-coordinate of the center of the cross
+var outerCrossY = 510; // Y-coordinate of the center of the cross
+
+// Draw the cross
+for (var i = 0; i < 5; i++) {
+  ctx.beginPath();
+  
+  // Draw the vertical and horizontal lines of the cross
+  ctx.moveTo(outerCrossX, outerCrossY - crossSize / 2);
+  ctx.lineTo(outerCrossX, outerCrossY + crossSize / 2);
+  
+  ctx.moveTo(outerCrossX - crossSize / 2, outerCrossY);
+  ctx.lineTo(outerCrossX + crossSize / 2, outerCrossY);
+
+  ctx.closePath();
+  
+  // Fill each section of the cross with a different color
+  var color;
+  if (i === 0) color = "green";
+  else if (i === 1) color = "yellow";
+  else if (i === 2) color = "red";
+  else if (i === 3) color = "green";
+  else if (i === 4) color = "yellow";
+
+  ctx.strokeStyle = color;
+  ctx.lineWidth = 10; // Adjust line width as needed
+  ctx.stroke();
+  
+  crossSize -= 10; // Reduce the size for the next inner cross section
+}
+
+var crossSize = 100; // Size of each section of the cross
+var outerCrossX = 900; // X-coordinate of the center of the cross
+var outerCrossY = 610; // Y-coordinate of the center of the cross
+
+// Draw the cross
+for (var i = 0; i < 5; i++) {
+  ctx.beginPath();
+  
+  // Draw the vertical and horizontal lines of the cross
+  ctx.moveTo(outerCrossX, outerCrossY - crossSize / 2);
+  ctx.lineTo(outerCrossX, outerCrossY + crossSize / 2);
+  
+  ctx.moveTo(outerCrossX - crossSize / 2, outerCrossY);
+  ctx.lineTo(outerCrossX + crossSize / 2, outerCrossY);
+
+  ctx.closePath();
+  
+  // Fill each section of the cross with a different color
+  var color;
+  if (i === 0) color = "green";
+  else if (i === 1) color = "red";
+  else if (i === 2) color = "red";
+  else if (i === 3) color = "green";
+  else if (i === 4) color = "red";
+
+  ctx.strokeStyle = color;
+  ctx.lineWidth = 10; // Adjust line width as needed
+  ctx.stroke();
+  
+  crossSize -= 10; // Reduce the size for the next inner cross section
+}
+
+var gradient = ctx.createLinearGradient(950, 0, 1050, 0);
+
+gradient.addColorStop(0, "purple"); // Start with blue color
+//gradient.addColorStop(1, "transparent"); // Fade to transparent
+
+// Save the current globalCompositeOperation
+var previousCompositeOperation = ctx.globalCompositeOperation;
+
+// Set the globalCompositeOperation to 'destination-over'
+ctx.globalCompositeOperation = "destination-over";
+
+
+
+// Define the clipping region
+ctx.beginPath();
+ctx.moveTo(850, 0);
+ctx.lineTo(850, h);
+ctx.lineTo(960, h);
+ctx.lineTo(960, 0);
+ctx.fillStyle = gradient;
+ctx.fill();
+
+ctx.globalCompositeOperation = previousCompositeOperation;
+//,,,
+var gradient = ctx.createLinearGradient(950, 0, 1050, 0);
+gradient.addColorStop(0, "white"); // Start with blue color
+//gradient.addColorStop(1, "transparent"); // Fade to transparent
+
+// Save the current globalCompositeOperation
+var previousCompositeOperation = ctx.globalCompositeOperation;
+
+// Set the globalCompositeOperation to 'destination-over'
+ctx.globalCompositeOperation = "destination-over";
+ctx.beginPath();
+ctx.moveTo(851, 0);
+ctx.lineTo(851, h);
+ctx.lineTo(650, h);
+ctx.lineTo(650, 0);
+ctx.fillStyle = gradient;
+ctx.fill();
+
+ctx.globalCompositeOperation = previousCompositeOperation;
+//,,,,
+var gradient = ctx.createLinearGradient(950, 0, 1050, 0);
+gradient.addColorStop(0, "purple"); // Start with blue color
+//gradient.addColorStop(1, "transparent"); // Fade to transparent
+
+// Save the current globalCompositeOperation
+var previousCompositeOperation = ctx.globalCompositeOperation;
+
+// Set the globalCompositeOperation to 'destination-over'
+ctx.globalCompositeOperation = "destination-over";
+ctx.beginPath();
+ctx.moveTo(550, 0);
+ctx.lineTo(550, h);
+ctx.lineTo(650, h);
+ctx.lineTo(650, 0);
+ctx.fillStyle = gradient;
+ctx.fill();
+
+ctx.globalCompositeOperation = previousCompositeOperation;
+
+var starSize = 180; // Size of each inner star
+var outerStarX = 750; // X-coordinate of the center of the outer star
+var outerStarY = 50; // Y-coordinate of the center of the outer star
+
+// Function to draw a star
+function drawStar(ctx, x, y, radius, points, inset) {
+  ctx.beginPath();
+  ctx.moveTo(x, y - radius);
+  for (var i = 0; i < points; i++) {
+    ctx.lineTo(
+      x + Math.cos(((i * 2 * Math.PI) / points) - Math.PI / 2) * radius,
+      y + Math.sin(((i * 2 * Math.PI) / points) - Math.PI / 2) * radius
+    );
+    ctx.lineTo(
+      x + Math.cos(((i * 2 * Math.PI) / points + Math.PI / points) - Math.PI / 2) * (radius * inset),
+      y + Math.sin(((i * 2 * Math.PI) / points + Math.PI / points) - Math.PI / 2) * (radius * inset)
+    );
+  }
+  ctx.closePath();
+}
+
+// Draw inner stars
+for (var i = 0; i < 5; i++) {
+  // Set the color for each star
+  var color;
+  if (i === 0) color = "green";
+  else if (i === 1) color = "yellow";
+  else if (i === 2) color = "red";
+  else if (i === 3) color = "white";
+  else if (i === 4) color = "blue";
+  
+  ctx.fillStyle = color;
+
+  // Draw the star
+  drawStar(ctx, outerStarX, outerStarY, starSize / 2, 5, 0.5);
+  ctx.fill();
+  
+  starSize -= 30; // Reduce the size for the next inner star
+}
+
+
+var starSize = 180; // Size of each inner star
+var outerStarX = 750; // X-coordinate of the center of the outer star
+var outerStarY = 230; // Y-coordinate of the center of the outer star
+
+// Function to draw a star
+function drawStar(ctx, x, y, radius, points, inset) {
+  ctx.beginPath();
+  ctx.moveTo(x, y - radius);
+  for (var i = 0; i < points; i++) {
+    ctx.lineTo(
+      x + Math.cos(((i * 2 * Math.PI) / points) - Math.PI / 2) * radius,
+      y + Math.sin(((i * 2 * Math.PI) / points) - Math.PI / 2) * radius
+    );
+    ctx.lineTo(
+      x + Math.cos(((i * 2 * Math.PI) / points + Math.PI / points) - Math.PI / 2) * (radius * inset),
+      y + Math.sin(((i * 2 * Math.PI) / points + Math.PI / points) - Math.PI / 2) * (radius * inset)
+    );
+  }
+  ctx.closePath();
+}
+
+// Draw inner stars
+for (var i = 0; i < 5; i++) {
+  // Set the color for each star
+  var color;
+  if (i === 0) color = "green";
+  else if (i === 1) color = "yellow";
+  else if (i === 2) color = "red";
+  else if (i === 3) color = "white";
+  else if (i === 4) color = "blue";
+  
+  ctx.fillStyle = color;
+
+  // Draw the star
+  drawStar(ctx, outerStarX, outerStarY, starSize / 2, 5, 0.5);
+  ctx.fill();
+  
+  starSize -= 30; // Reduce the size for the next inner star
+}
+
+var starSize = 180; // Size of each inner star
+var outerStarX = 750; // X-coordinate of the center of the outer star
+var outerStarY = 410; // Y-coordinate of the center of the outer star
+
+// Function to draw a star
+function drawStar(ctx, x, y, radius, points, inset) {
+  ctx.beginPath();
+  ctx.moveTo(x, y - radius);
+  for (var i = 0; i < points; i++) {
+    ctx.lineTo(
+      x + Math.cos(((i * 2 * Math.PI) / points) - Math.PI / 2) * radius,
+      y + Math.sin(((i * 2 * Math.PI) / points) - Math.PI / 2) * radius
+    );
+    ctx.lineTo(
+      x + Math.cos(((i * 2 * Math.PI) / points + Math.PI / points) - Math.PI / 2) * (radius * inset),
+      y + Math.sin(((i * 2 * Math.PI) / points + Math.PI / points) - Math.PI / 2) * (radius * inset)
+    );
+  }
+  ctx.closePath();
+}
+
+// Draw inner stars
+for (var i = 0; i < 5; i++) {
+  // Set the color for each star
+  var color;
+  if (i === 0) color = "green";
+  else if (i === 1) color = "yellow";
+  else if (i === 2) color = "red";
+  else if (i === 3) color = "white";
+  else if (i === 4) color = "blue";
+  
+  ctx.fillStyle = color;
+
+  // Draw the star
+  drawStar(ctx, outerStarX, outerStarY, starSize / 2, 5, 0.5);
+  ctx.fill();
+  
+  starSize -= 30; // Reduce the size for the next inner star
+}
+
+var starSize = 180; // Size of each inner star
+var outerStarX = 750; // X-coordinate of the center of the outer star
+var outerStarY = 590; // Y-coordinate of the center of the outer star
+
+// Function to draw a star
+function drawStar(ctx, x, y, radius, points, inset) {
+  ctx.beginPath();
+  ctx.moveTo(x, y - radius);
+  for (var i = 0; i < points; i++) {
+    ctx.lineTo(
+      x + Math.cos(((i * 2 * Math.PI) / points) - Math.PI / 2) * radius,
+      y + Math.sin(((i * 2 * Math.PI) / points) - Math.PI / 2) * radius
+    );
+    ctx.lineTo(
+      x + Math.cos(((i * 2 * Math.PI) / points + Math.PI / points) - Math.PI / 2) * (radius * inset),
+      y + Math.sin(((i * 2 * Math.PI) / points + Math.PI / points) - Math.PI / 2) * (radius * inset)
+    );
+  }
+  ctx.closePath();
+}
+
+// Draw inner stars
+for (var i = 0; i < 5; i++) {
+  // Set the color for each star
+  var color;
+  if (i === 0) color = "green";
+  else if (i === 1) color = "yellow";
+  else if (i === 2) color = "red";
+  else if (i === 3) color = "white";
+  else if (i === 4) color = "blue";
+  
+  ctx.fillStyle = color;
+
+  // Draw the star
+  drawStar(ctx, outerStarX, outerStarY, starSize / 2, 5, 0.5);
+  ctx.fill();
+  
+  starSize -= 30; // Reduce the size for the next inner star
+}
+
+</script> 

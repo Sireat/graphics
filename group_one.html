@@ -1,0 +1,922 @@
+
+<canvas id="view"></canvas>
+<script>
+
+  // computer graphics group one 
+  // name                                                      id
+  // Sireat Mihretu                                            1203295
+var vw = document.getElementById("view");
+var ctx = vw.getContext("2d");
+var w = vw.width=window.innerWidth;
+var h=vw.height=window.innerHeight;
+ctx.fillStyle = "red";
+ctx.fill();
+ctx.stroke();
+var diamondSize = 100; // Size of each inner diamond
+var outerDiamondX = 600; // X-coordinate of the center of the outer diamond
+var outerDiamondY = 0; // Y-coordinate of the center of the outer diamond
+for (var i = 0; i < 5; i++) {
+  ctx.beginPath();
+  ctx.moveTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.lineTo(outerDiamondX - diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY + diamondSize / 2);
+  ctx.lineTo(outerDiamondX + diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.closePath();
+  
+  // Fill each inner diamond with a different color
+  var color;
+  if (i === 0) color = "yellow";
+  else if (i === 1) color = "red";
+  else if (i === 2) color = "purple";
+  else if (i === 3) color = "white";
+  else if (i === 4) color = "blue";
+  
+  ctx.fillStyle = color;
+  ctx.fill();
+  
+  diamondSize -= 20; // Reduce the size for the next inner diamond
+}
+
+
+//................
+var diamondSize = 100; // Size of each inner diamond
+var outerDiamondX = 600; // X-coordinate of the center of the outer diamond
+var outerDiamondY = 110; // Y-coordinate of the center of the outer diamond
+
+// Draw  inner diamonds
+for (var i = 0; i < 5; i++) {
+  ctx.beginPath();
+  ctx.moveTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.lineTo(outerDiamondX - diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY + diamondSize / 2);
+  ctx.lineTo(outerDiamondX + diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.closePath();
+  
+  // Fill each inner diamond with a different color
+  var color;
+  if (i === 0) color = "yellow";
+  else if (i === 1) color = "red";
+  else if (i === 2) color = "purple";
+  else if (i === 3) color = "white";
+  else if (i === 4) color = "blue";
+  
+  ctx.fillStyle = color;
+  ctx.fill();
+  
+  diamondSize -= 20; // Reduce the size for the next inner diamond
+}
+
+//..................
+var diamondSize = 100; // Size of each inner diamond
+var outerDiamondX = 600; // X-coordinate of the center of the outer diamond
+var outerDiamondY = 210; // Y-coordinate of the center of the outer diamond
+
+// Draw  inner diamonds
+for (var i = 0; i < 5; i++) {
+  ctx.beginPath();
+  ctx.moveTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.lineTo(outerDiamondX - diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY + diamondSize / 2);
+  ctx.lineTo(outerDiamondX + diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.closePath();
+  
+  // Fill each inner diamond with a different color
+  var color;
+  if (i === 0) color = "yellow";
+  else if (i === 1) color = "red";
+  else if (i === 2) color = "purple";
+  else if (i === 3) color = "white";
+  else if (i === 4) color = "blue";
+  
+  
+  ctx.fillStyle = color;
+  ctx.fill();
+  
+  diamondSize -= 20; // Reduce the size for the next inner diamond
+}
+
+ctx.closePath();
+ctx.beginPath();
+ctx.beginPath();
+ctx.moveTo(600, 140);
+
+
+ctx.fillStyle = "red";
+ctx.fill();
+ctx.stroke();
+
+var diamondSize = 100; // Size of each inner diamond
+var outerDiamondX = 600; // X-coordinate of the center of the outer diamond
+var outerDiamondY = 310; // Y-coordinate of the center of the outer diamond
+
+// Draw  inner diamonds
+for (var i = 0; i < 5; i++) {
+  ctx.beginPath();
+  ctx.moveTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.lineTo(outerDiamondX - diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY + diamondSize / 2);
+  ctx.lineTo(outerDiamondX + diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.closePath();
+  
+  // Fill each inner diamond with a different color
+  var color;
+  if (i === 0) color = "yellow";
+  else if (i === 1) color = "red";
+  else if (i === 2) color = "purple";
+  else if (i === 3) color = "white";
+  else if (i === 4) color = "blue";
+  
+  ctx.fillStyle = color;
+  ctx.fill();
+  
+  diamondSize -= 20; // Reduce the size for the next inner diamond
+}
+//..........................
+var diamondSize = 100; // Size of each inner diamond
+var outerDiamondX = 600; // X-coordinate of the center of the outer diamond
+var outerDiamondY = 410; // Y-coordinate of the center of the outer diamond
+
+// Draw  inner diamonds
+for (var i = 0; i < 5; i++) {
+  ctx.beginPath();
+  ctx.moveTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.lineTo(outerDiamondX - diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY + diamondSize / 2);
+  ctx.lineTo(outerDiamondX + diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.closePath();
+  
+  // Fill each inner diamond with a different color
+  var color;
+  if (i === 0) color = "yellow";
+  else if (i === 1) color = "red";
+  else if (i === 2) color = "purple";
+  else if (i === 3) color = "white";
+  else if (i === 4) color = "blue";
+  
+  
+  ctx.fillStyle = color;
+  ctx.fill();
+  
+  diamondSize -= 20; // Reduce the size for the next inner diamond
+}
+//,,,,,,,,,,,,,,,,,,,,,
+var diamondSize = 100; // Size of each inner diamond
+var outerDiamondX = 600; // X-coordinate of the center of the outer diamond
+var outerDiamondY = 510; // Y-coordinate of the center of the outer diamond
+
+// Draw  inner diamonds
+for (var i = 0; i < 5; i++) {
+  ctx.beginPath();
+  ctx.moveTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.lineTo(outerDiamondX - diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY + diamondSize / 2);
+  ctx.lineTo(outerDiamondX + diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.closePath();
+  
+  // Fill each inner diamond with a different color
+  var color;
+  if (i === 0) color = "yellow";
+  else if (i === 1) color = "red";
+  else if (i === 2) color = "purple";
+  else if (i === 3) color = "white";
+  else if (i === 4) color = "blue";
+  
+  ctx.fillStyle = color;
+  ctx.fill();
+  
+  diamondSize -= 20; // Reduce the size for the next inner diamond
+}
+///,,,,,,,,,,
+
+var diamondSize = 100; // Size of each inner diamond
+var outerDiamondX = 600; // X-coordinate of the center of the outer diamond
+var outerDiamondY = 410; // Y-coordinate of the center of the outer diamond
+
+// Draw  inner diamonds
+for (var i = 0; i < 5; i++) {
+  ctx.beginPath();
+  ctx.moveTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.lineTo(outerDiamondX - diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY + diamondSize / 2);
+  ctx.lineTo(outerDiamondX + diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.closePath();
+  
+  // Fill each inner diamond with a different color
+  var color;
+  if (i === 0) color = "yellow";
+  else if (i === 1) color = "red";
+  else if (i === 2) color = "purple";
+  else if (i === 3) color = "white";
+  else if (i === 4) color = "blue";
+  
+  ctx.fillStyle = color;
+  ctx.fill();
+  
+  diamondSize -= 20; // Reduce the size for the next inner diamond
+}
+//,,,,,,,,,,,,,,,,,,,,,
+var diamondSize = 100; // Size of each inner diamond
+var outerDiamondX = 600; // X-coordinate of the center of the outer diamond
+var outerDiamondY = 610; // Y-coordinate of the center of the outer diamond
+
+// Draw  inner diamonds
+for (var i = 0; i < 5; i++) {
+  ctx.beginPath();
+  ctx.moveTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.lineTo(outerDiamondX - diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY + diamondSize / 2);
+  ctx.lineTo(outerDiamondX + diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.closePath();
+  
+  // Fill each inner diamond with a different color
+  var color;
+  if (i === 0) color = "yellow";
+  else if (i === 1) color = "red";
+  else if (i === 2) color = "purple";
+  else if (i === 3) color = "white";
+  else if (i === 4) color = "blue";
+  
+  
+  ctx.fillStyle = color;
+  ctx.fill();
+  
+  diamondSize -= 20; // Reduce the size for the next inner diamond
+}
+//mmmmmmmmmm
+var diamondSize = 100; // Size of each inner diamond
+var outerDiamondX = 600; // X-coordinate of the center of the outer diamond
+var outerDiamondY = 710; // Y-coordinate of the center of the outer diamond
+
+for (var i = 0; i < 5; i++) {
+  ctx.beginPath();
+  ctx.moveTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.lineTo(outerDiamondX - diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY + diamondSize / 2);
+  ctx.lineTo(outerDiamondX + diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.closePath();
+  
+  // Fill each inner diamond with a different color
+  var color;
+  if (i === 0) color = "yellow";
+  else if (i === 1) color = "red";
+  else if (i === 2) color = "purple";
+  else if (i === 3) color = "white";
+  else if (i === 4) color = "blue";
+  
+  ctx.fillStyle = color;
+  ctx.fill();
+  
+  diamondSize -= 20; // Reduce the size for the next inner diamond
+}
+// one more
+var diamondSize = 100; // Size of each inner diamond
+var outerDiamondX = 600; // X-coordinate of the center of the outer diamond
+var outerDiamondY = 810; // Y-coordinate of the center of the outer diamond
+
+for (var i = 0; i < 5; i++) {
+  ctx.beginPath();
+  ctx.moveTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.lineTo(outerDiamondX - diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY + diamondSize / 2);
+  ctx.lineTo(outerDiamondX + diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.closePath();
+  
+  // Fill each inner diamond with a different color
+  var color;
+  if (i === 0) color = "yellow";
+  else if (i === 1) color = "red";
+  else if (i === 2) color = "purple";
+  else if (i === 3) color = "white";
+  else if (i === 4) color = "blue";
+  
+  ctx.fillStyle = color;
+  ctx.fill();
+  
+  diamondSize -= 20; // Reduce the size for the next inner diamond
+}
+// end
+var diamondSize = 100; // Size of each inner diamond
+var outerDiamondX = 600; // X-coordinate of the center of the outer diamond
+var outerDiamondY = 910; // Y-coordinate of the center of the outer diamond
+
+for (var i = 0; i < 5; i++) {
+  ctx.beginPath();
+  ctx.moveTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.lineTo(outerDiamondX - diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY + diamondSize / 2);
+  ctx.lineTo(outerDiamondX + diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.closePath();
+  
+  // Fill each inner diamond with a different color
+  var color;
+  if (i === 0) color = "yellow";
+  else if (i === 1) color = "red";
+  else if (i === 2) color = "purple";
+  else if (i === 3) color = "white";
+  else if (i === 4) color = "blue";
+  
+  ctx.fillStyle = color;
+  ctx.fill();
+  
+  diamondSize -= 20; // Reduce the size for the next inner diamond
+}
+/// right
+ctx.fillStyle = "red";
+ctx.fill();
+ctx.stroke();
+var diamondSize = 100; // Size of each inner diamond
+var outerDiamondX = 900; // X-coordinate of the center of the outer diamond
+var outerDiamondY = 0; // Y-coordinate of the center of the outer diamond
+
+// Draw 5 inner diamonds
+for (var i = 0; i < 5; i++) {
+  ctx.beginPath();
+  ctx.moveTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.lineTo(outerDiamondX - diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY + diamondSize / 2);
+  ctx.lineTo(outerDiamondX + diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.closePath();
+  
+  // Fill each inner diamond with a different color
+  var color;
+  if (i === 0) color = "yellow";
+  else if (i === 1) color = "red";
+  else if (i === 2) color = "purple";
+  else if (i === 3) color = "white";
+  else if (i === 4) color = "blue";
+  
+  ctx.fillStyle = color;
+  ctx.fill();
+  
+  diamondSize -= 20; // Reduce the size for the next inner diamond
+}
+
+
+//................
+var diamondSize = 100; // Size of each inner diamond
+var outerDiamondX = 900; // X-coordinate of the center of the outer diamond
+var outerDiamondY = 110; // Y-coordinate of the center of the outer diamond
+
+// Draw  inner diamonds
+for (var i = 0; i < 5; i++) {
+  ctx.beginPath();
+  ctx.moveTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.lineTo(outerDiamondX - diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY + diamondSize / 2);
+  ctx.lineTo(outerDiamondX + diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.closePath();
+  
+  // Fill each inner diamond with a different color
+  var color;
+  if (i === 0) color = "yellow";
+  else if (i === 1) color = "red";
+  else if (i === 2) color = "purple";
+  else if (i === 3) color = "white";
+  else if (i === 4) color = "blue";
+  ctx.fillStyle = color;
+  ctx.fill();
+  
+  diamondSize -= 20; // Reduce the size for the next inner diamond
+}
+
+//..................
+var diamondSize = 100; // Size of each inner diamond
+var outerDiamondX = 900; // X-coordinate of the center of the outer diamond
+var outerDiamondY = 210; // Y-coordinate of the center of the outer diamond
+
+// Draw  inner diamonds
+for (var i = 0; i < 5; i++) {
+  ctx.beginPath();
+  ctx.moveTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.lineTo(outerDiamondX - diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY + diamondSize / 2);
+  ctx.lineTo(outerDiamondX + diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.closePath();
+  
+  // Fill each inner diamond with a different color
+  var color;
+  if (i === 0) color = "yellow";
+  else if (i === 1) color = "red";
+  else if (i === 2) color = "purple";
+  else if (i === 3) color = "white";
+  else if (i === 4) color = "blue";
+  
+  ctx.fillStyle = color;
+  ctx.fill();
+  
+  diamondSize -= 20; // Reduce the size for the next inner diamond
+}
+
+ctx.closePath();
+ctx.beginPath();
+ctx.beginPath();
+ctx.moveTo(600, 140);
+
+
+ctx.fillStyle = "red";
+ctx.fill();
+ctx.stroke();
+
+
+
+var diamondSize = 100; // Size of each inner diamond
+var outerDiamondX = 900; // X-coordinate of the center of the outer diamond
+var outerDiamondY = 310; // Y-coordinate of the center of the outer diamond
+
+// Draw  inner diamonds
+for (var i = 0; i < 5; i++) {
+  ctx.beginPath();
+  ctx.moveTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.lineTo(outerDiamondX - diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY + diamondSize / 2);
+  ctx.lineTo(outerDiamondX + diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.closePath();
+  
+  // Fill each inner diamond with a different color
+  var color;
+  if (i === 0) color = "yellow";
+  else if (i === 1) color = "red";
+  else if (i === 2) color = "purple";
+  else if (i === 3) color = "white";
+  else if (i === 4) color = "blue";
+  
+  ctx.fillStyle = color;
+  ctx.fill();
+  
+  diamondSize -= 20; // Reduce the size for the next inner diamond
+}
+//..........................
+var diamondSize = 100; // Size of each inner diamond
+var outerDiamondX =900; // X-coordinate of the center of the outer diamond
+var outerDiamondY = 410; // Y-coordinate of the center of the outer diamond
+
+// Draw 5 inner diamonds
+for (var i = 0; i < 5; i++) {
+  ctx.beginPath();
+  ctx.moveTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.lineTo(outerDiamondX - diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY + diamondSize / 2);
+  ctx.lineTo(outerDiamondX + diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.closePath();
+  
+  // Fill each inner diamond with a different color
+  var color;
+  if (i === 0) color = "yellow";
+  else if (i === 1) color = "red";
+  else if (i === 2) color = "purple";
+  else if (i === 3) color = "white";
+  else if (i === 4) color = "blue";
+  ctx.fillStyle = color;
+  ctx.fill();
+  
+  diamondSize -= 20; // Reduce the size for the next inner diamond
+}
+//,,,,,,,,,,,,,,,,,,,,,
+var diamondSize = 100; // Size of each inner diamond
+var outerDiamondX = 900; // X-coordinate of the center of the outer diamond
+var outerDiamondY = 510; // Y-coordinate of the center of the outer diamond
+
+// Draw  inner diamonds
+for (var i = 0; i < 5; i++) {
+  ctx.beginPath();
+  ctx.moveTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.lineTo(outerDiamondX - diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY + diamondSize / 2);
+  ctx.lineTo(outerDiamondX + diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.closePath();
+  
+  // Fill each inner diamond with a different color
+  var color;
+  if (i === 0) color = "yellow";
+  else if (i === 1) color = "red";
+  else if (i === 2) color = "purple";
+  else if (i === 3) color = "white";
+  else if (i === 4) color = "blue";
+  ctx.fillStyle = color;
+  ctx.fill();
+  
+  diamondSize -= 20; // Reduce the size for the next inner diamond
+}
+///,,,,,,,,,,
+
+var diamondSize = 100; // Size of each inner diamond
+var outerDiamondX = 900; // X-coordinate of the center of the outer diamond
+var outerDiamondY = 610; // Y-coordinate of the center of the outer diamond
+
+// Draw  inner diamonds
+for (var i = 0; i < 5; i++) {
+  ctx.beginPath();
+  ctx.moveTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.lineTo(outerDiamondX - diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY + diamondSize / 2);
+  ctx.lineTo(outerDiamondX + diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.closePath();
+  
+  // Fill each inner diamond with a different color
+  var color;
+  if (i === 0) color = "yellow";
+  else if (i === 1) color = "red";
+  else if (i === 2) color = "purple";
+  else if (i === 3) color = "white";
+  else if (i === 4) color = "blue";
+  ctx.fillStyle = color;
+  ctx.fill();
+  
+  diamondSize -= 20; // Reduce the size for the next inner diamond
+}
+//,,,,,,,,,,,,,,,,,,,,,
+var diamondSize = 100; // Size of each inner diamond
+var outerDiamondX = 900; // X-coordinate of the center of the outer diamond
+var outerDiamondY = 710; // Y-coordinate of the center of the outer diamond
+
+// Draw inner diamonds
+for (var i = 0; i < 5; i++) {
+  ctx.beginPath();
+  ctx.moveTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.lineTo(outerDiamondX - diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY + diamondSize / 2);
+  ctx.lineTo(outerDiamondX + diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.closePath();
+  
+  // Fill each inner diamond with a different color
+  var color;
+  if (i === 0) color = "yellow";
+  else if (i === 1) color = "red";
+  else if (i === 2) color = "purple";
+  else if (i === 3) color = "white";
+  else if (i === 4) color = "blue";
+  
+  ctx.fillStyle = color;
+  ctx.fill();
+  
+  diamondSize -= 20; // Reduce the size for the next inner diamond
+}
+//mmmmmmmmmm
+var diamondSize = 100; // Size of each inner diamond
+var outerDiamondX = 900; // X-coordinate of the center of the outer diamond
+var outerDiamondY = 810; // Y-coordinate of the center of the outer diamond
+
+for (var i = 0; i < 5; i++) {
+  ctx.beginPath();
+  ctx.moveTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.lineTo(outerDiamondX - diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY + diamondSize / 2);
+  ctx.lineTo(outerDiamondX + diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.closePath();
+  
+  // Fill each inner diamond with a different color
+  var color;
+  var color;
+  if (i === 0) color = "yellow";
+  else if (i === 1) color = "red";
+  else if (i === 2) color = "purple";
+  else if (i === 3) color = "white";
+  else if (i === 4) color = "blue";
+  ctx.fillStyle = color;
+  ctx.fill();
+  
+  diamondSize -= 20; // Reduce the size for the next inner diamond
+}
+// 
+var diamondSize = 100; // Size of each inner diamond
+var outerDiamondX = 900; // X-coordinate of the center of the outer diamond
+var outerDiamondY = 910; // Y-coordinate of the center of the outer diamond
+
+for (var i = 0; i < 5; i++) {
+  ctx.beginPath();
+  ctx.moveTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.lineTo(outerDiamondX - diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY + diamondSize / 2);
+  ctx.lineTo(outerDiamondX + diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.closePath();
+  
+  // Fill each inner diamond with a different color
+  var color;
+  var color;
+  if (i === 0) color = "yellow";
+  else if (i === 1) color = "red";
+  else if (i === 2) color = "purple";
+  else if (i === 3) color = "white";
+  else if (i === 4) color = "blue";
+  ctx.fillStyle = color;
+  ctx.fill();
+  
+  diamondSize -= 20; // Reduce the size for the next inner diamond
+}
+// danny add
+var diamondSize = 100; // Size of each inner diamond
+var outerDiamondX = 900; // X-coordinate of the center of the outer diamond
+var outerDiamondY = 1110; // Y-coordinate of the center of the outer diamond
+
+for (var i = 0; i < 5; i++) {
+  ctx.beginPath();
+  ctx.moveTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.lineTo(outerDiamondX - diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY + diamondSize / 2);
+  ctx.lineTo(outerDiamondX + diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.closePath();
+  
+  // Fill each inner diamond with a different color
+  var color;
+  var color;
+  if (i === 0) color = "yellow";
+  else if (i === 1) color = "red";
+  else if (i === 2) color = "purple";
+  else if (i === 3) color = "white";
+  else if (i === 4) color = "blue";
+  ctx.fillStyle = color;
+  ctx.fill();
+  
+  diamondSize -= 20; // Reduce the size for the next inner diamond
+}
+// ablante add
+var diamondSize = 100; // Size of each inner diamond
+var outerDiamondX = 900; // X-coordinate of the center of the outer diamond
+var outerDiamondY = 1210; // Y-coordinate of the center of the outer diamond
+
+for (var i = 0; i < 5; i++) {
+  ctx.beginPath();
+  ctx.moveTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.lineTo(outerDiamondX - diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY + diamondSize / 2);
+  ctx.lineTo(outerDiamondX + diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.closePath();
+  
+  // Fill each inner diamond with a different color
+  var color;
+  var color;
+  if (i === 0) color = "yellow";
+  else if (i === 1) color = "red";
+  else if (i === 2) color = "purple";
+  else if (i === 3) color = "white";
+  else if (i === 4) color = "blue";
+  ctx.fillStyle = color;
+  ctx.fill();
+  
+  diamondSize -= 20; // Reduce the size for the next inner diamond
+}
+//mmmm
+var gradient = ctx.createLinearGradient(950, 0, 1050, 0);
+gradient.addColorStop(0, "green"); // Start with blue color
+//gradient.addColorStop(1, "transparent"); // Fade to transparent
+
+// Save the current globalCompositeOperation
+var previousCompositeOperation = ctx.globalCompositeOperation;
+
+// Set the globalCompositeOperation to 'destination-over'
+ctx.globalCompositeOperation = "destination-over";
+
+
+
+// Define the clipping region
+ctx.beginPath();
+ctx.moveTo(850, 0);
+ctx.lineTo(850, h);
+ctx.lineTo(960, h);
+ctx.lineTo(960, 0);
+ctx.fillStyle = gradient;
+ctx.fill();
+
+ctx.globalCompositeOperation = previousCompositeOperation;
+//,,,
+var gradient = ctx.createLinearGradient(950, 0, 1050, 0);
+gradient.addColorStop(0, "red"); // Start with blue color
+//gradient.addColorStop(1, "transparent"); // Fade to transparent
+
+// Save the current globalCompositeOperation
+var previousCompositeOperation = ctx.globalCompositeOperation;
+
+// Set the globalCompositeOperation to 'destination-over'
+ctx.globalCompositeOperation = "destination-over";
+ctx.beginPath();
+ctx.moveTo(851, 0);
+ctx.lineTo(851, h);
+ctx.lineTo(650, h);
+ctx.lineTo(650, 0);
+ctx.fillStyle = gradient;
+ctx.fill();
+
+ctx.globalCompositeOperation = previousCompositeOperation;
+//,,,,
+var gradient = ctx.createLinearGradient(950, 0, 1050, 0);
+gradient.addColorStop(0, "green"); // Start with blue color
+//gradient.addColorStop(1, "transparent"); // Fade to transparent
+
+// Save the current globalCompositeOperation
+var previousCompositeOperation = ctx.globalCompositeOperation;
+
+// Set the globalCompositeOperation to 'destination-over'
+ctx.globalCompositeOperation = "destination-over";
+ctx.beginPath();
+ctx.moveTo(550, 0);
+ctx.lineTo(550, h);
+ctx.lineTo(650, h);
+ctx.lineTo(650, 0);
+ctx.fillStyle = gradient;
+ctx.fill();
+
+ctx.globalCompositeOperation = previousCompositeOperation;
+
+var diamondSize = 180; // Size of each inner diamond
+var outerDiamondX = 750; // X-coordinate of the center of the outer diamond
+var outerDiamondY = 50; // Y-coordinate of the center of the outer diamond
+
+// Draw 5 inner diamonds
+for (var i = 0; i < 5; i++) {
+  ctx.beginPath();
+  ctx.moveTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.lineTo(outerDiamondX - diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY + diamondSize / 2);
+  ctx.lineTo(outerDiamondX + diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.closePath();
+  ctx.stroke();
+
+  // Fill each inner diamond with a different color
+  var color;
+  if (i === 0) color = "green";
+  else if (i === 1) color = "green";
+  else if (i === 2) color = "yellow";
+  else if (i === 3) color = "yellow";
+  else if (i === 4) color = "brown";
+  else if (i === 5) color = "brown";
+  
+  
+  ctx.fillStyle = color;
+  ctx.fill();
+  
+  diamondSize -= 20; // Reduce the size for the next inner diamond
+}
+
+//;;;;;;;;;;;;
+var diamondSize = 180; // Size of each inner diamond
+var outerDiamondX = 750; // X-coordinate of the center of the outer diamond
+var outerDiamondY = 230; // Y-coordinate of the center of the outer diamond
+
+// Draw 5 inner diamonds
+for (var i = 0; i < 5; i++) {
+  ctx.beginPath();
+  ctx.moveTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.lineTo(outerDiamondX - diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY + diamondSize / 2);
+  ctx.lineTo(outerDiamondX + diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.closePath();
+  ctx.stroke();
+
+  // Fill each inner diamond with a different color
+  var color;
+  if (i === 0) color = "green";
+  else if (i === 1) color = "green";
+  else if (i === 2) color = "yellow";
+  else if (i === 3) color = "yellow";
+  else if (i === 4) color = "brown";
+  else if (i === 5) color = "brown";
+  
+  ctx.fillStyle = color;
+  ctx.fill();
+  
+  diamondSize -= 20; // Reduce the size for the next inner diamond
+}
+var diamondSize = 180; // Size of each inner diamond
+var outerDiamondX = 750; // X-coordinate of the center of the outer diamond
+var outerDiamondY = 410; // Y-coordinate of the center of the outer diamond
+
+// Draw 5 inner diamonds
+for (var i = 0; i < 5; i++) {
+  ctx.beginPath();
+  ctx.moveTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.lineTo(outerDiamondX - diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY + diamondSize / 2);
+  ctx.lineTo(outerDiamondX + diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.closePath();
+  ctx.stroke();
+
+  // Fill each inner diamond with a different color
+  var color;
+  if (i === 0) color = "green";
+  else if (i === 1) color = "green";
+  else if (i === 2) color = "yellow";
+  else if (i === 3) color = "yellow";
+  else if (i === 4) color = "brown";
+  else if (i === 5) color = "brown";
+  
+  ctx.fillStyle = color;
+  ctx.fill();
+  
+  diamondSize -= 20; // Reduce the size for the next inner diamond
+}
+var diamondSize = 180; // Size of each inner diamond
+var outerDiamondX = 750; // X-coordinate of the center of the outer diamond
+var outerDiamondY = 590; // Y-coordinate of the center of the outer diamond
+
+// Draw 5 inner diamonds
+for (var i = 0; i < 5; i++) {
+  ctx.beginPath();
+  ctx.moveTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.lineTo(outerDiamondX - diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY + diamondSize / 2);
+  ctx.lineTo(outerDiamondX + diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.closePath();
+  ctx.stroke();
+
+  // Fill each inner diamond with a different color
+  var color;
+  if (i === 0) color = "green";
+  else if (i === 1) color = "green";
+  else if (i === 2) color = "yellow";
+  else if (i === 3) color = "yellow";
+  else if (i === 4) color = "brown";
+  else if (i === 5) color = "brown";
+  
+  ctx.fillStyle = color;
+  ctx.fill();
+  
+  diamondSize -= 20; // Reduce the size for the next inner diamond
+}
+// add one
+var diamondSize = 180; // Size of each inner diamond
+var outerDiamondX = 750; // X-coordinate of the center of the outer diamond
+var outerDiamondY = 770; // Y-coordinate of the center of the outer diamond
+
+// Draw 5 inner diamonds
+for (var i = 0; i < 5; i++) {
+  ctx.beginPath();
+  ctx.moveTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.lineTo(outerDiamondX - diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY + diamondSize / 2);
+  ctx.lineTo(outerDiamondX + diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.closePath();
+  ctx.stroke();
+
+  // Fill each inner diamond with a different color
+  var color;
+  if (i === 0) color = "green";
+  else if (i === 1) color = "green";
+  else if (i === 2) color = "yellow";
+  else if (i === 3) color = "yellow";
+  else if (i === 4) color = "brown";
+  else if (i === 5) color = "brown";
+  
+  ctx.fillStyle = color;
+  ctx.fill();
+  
+  diamondSize -= 20; // Reduce the size for the next inner diamond
+}
+// last
+var diamondSize = 180; // Size of each inner diamond
+var outerDiamondX = 750; // X-coordinate of the center of the outer diamond
+var outerDiamondY = 950; // Y-coordinate of the center of the outer diamond
+
+// Draw 5 inner diamonds
+for (var i = 0; i < 5; i++) {
+  ctx.beginPath();
+  ctx.moveTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.lineTo(outerDiamondX - diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY + diamondSize / 2);
+  ctx.lineTo(outerDiamondX + diamondSize / 2, outerDiamondY);
+  ctx.lineTo(outerDiamondX, outerDiamondY - diamondSize / 2);
+  ctx.closePath();
+  ctx.stroke();
+
+  // Fill each inner diamond with a different color
+  var color;
+  if (i === 0) color = "green";
+  else if (i === 1) color = "green";
+  else if (i === 2) color = "yellow";
+  else if (i === 3) color = "yellow";
+  else if (i === 4) color = "brown";
+  else if (i === 5) color = "brown";
+  
+  ctx.fillStyle = color;
+  ctx.fill();
+  
+  diamondSize -= 20; // Reduce the size for the next inner diamond
+}
+</script>

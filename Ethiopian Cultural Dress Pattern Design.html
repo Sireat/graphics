@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+      <style>
+      canvas {
+        
+        background-color: #f9f6f3;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="dressCanvas" width="750" height="750"></canvas>
+
+    <script>
+      // *****************8a function used to draw diamond*******************
+      function drawDiamond(context, x, y, width, height, color) {
+        context.save(); /*  w w  w .j a va 2 s  .c o m*/
+        context.beginPath();
+        context.moveTo(x, y);
+
+        // top left edge
+        context.lineTo(x - width / 2, y + height / 2);
+
+        // bottom left edge
+        context.lineTo(x, y + height);
+
+        // bottom right edge
+        context.lineTo(x + width / 2, y + height / 2);
+
+        // closing the path automatically creates
+        // the top right edge
+        context.closePath();
+
+        context.fillStyle = color;
+        context.fill();
+        context.restore();
+      }
+
+      function drawRectangle(context, x, y, width, height, color) {
+        context.save();
+        context.beginPath();
+        context.moveTo(x, y);
+        // top left edge
+        context.lineTo(x, y);
+        // top right edge
+        context.lineTo(x + width, y);
+        // bottom right
+        context.lineTo(x + width, y + height);
+        // bottom left
+        context.lineTo(x, y + height);
+        context.lineTo(x, y);
+
+        context.closePath();
+
+        context.fillStyle = color;
+        context.fill();
+        context.restore();
+      }
+
+      // **************a function to draw cirlces*******************
+      function drawCircle(x, y, radius, color, context) {
+        context.beginPath();
+        context.arc(x, y, radius, 0, 2 * Math.PI);
+        context.fillStyle = color;
+        context.fill();
+        context.closePath();
+      }
+
+      window.addEventListener("load", () => {
+        const canvas = document.getElementById("dressCanvas");
+        const context = canvas.getContext("2d");
+
+        // Draw the neckline
+        context.beginPath();
+        context.moveTo(224, 100); // starting point (left side)
+        context.quadraticCurveTo(347, 180, 475, 100); // curve
+        context.strokeStyle = "red";
+        context.lineWidth = 2;
+        context.stroke();
+        context.closePath();
+
+        context.beginPath();
+        context.moveTo(228, 95); // starting point (left side)
+        context.quadraticCurveTo(343, 175, 470, 95); // curve
+        context.strokeStyle = "yellow";
+        context.lineWidth = 2;
+        context.stroke();
+        context.closePath();
+
+        context.beginPath();
+        context.moveTo(232, 90); // starting point (left side)
+        context.quadraticCurveTo(339, 170, 470, 90); // curve
+        context.strokeStyle = "#0353a4";
+        context.lineWidth = 2;
+        context.stroke();
+        context.closePath();
+
+        context.beginPath();
+        context.moveTo(236, 85); // starting point (left side)
+        context.quadraticCurveTo(335, 165, 464, 85); // curve
+        context.strokeStyle = "grey";
+        context.lineWidth = 2;
+        context.stroke();
+        context.closePath();
+
+        context.beginPath();
+        context.moveTo(240, 80); // starting point (left side)
+        context.quadraticCurveTo(331, 160, 460, 80); // curve
+        context.strokeStyle = "pink";
+        context.lineWidth = 2;
+        context.stroke();
+        context.closePath();
+
+        context.beginPath();
+        context.moveTo(246, 75); // starting point (left side)
+        context.quadraticCurveTo(327, 155, 454, 75); // curve
+        context.strokeStyle = "#0353a4";
+        context.lineWidth = 2;
+        context.stroke();
+        context.closePath();
+
+        context.beginPath();
+        context.moveTo(252, 70); // starting point (left side)
+        context.quadraticCurveTo(323, 150, 448, 70); // curve
+        context.strokeStyle = "grey";
+        context.lineWidth = 2;
+        context.stroke();
+        context.closePath();
+
+        context.beginPath();
+        context.moveTo(256, 65); // starting point (left side)
+        context.quadraticCurveTo(319, 140, 442, 68); // curve
+        context.strokeStyle = "pink";
+        context.lineWidth = 2;
+        context.stroke();
+        context.closePath();
+
+        context.beginPath();
+        context.moveTo(260, 65); // starting point (left side)
+        // context.quadraticCurveTo(300, 150, 360, 100); // curve
+        context.quadraticCurveTo(320, 130, 440, 65); // curve
+        context.strokeStyle = "#0353a4";
+        context.lineWidth = 2;
+        context.stroke();
+        context.closePath();
+        // *********************************************End of neckline ***************88//
+        // left incline line
+        context.beginPath();
+        context.moveTo(260, 65);
+        context.lineTo(180, 140);
+        context.strokeStyle = "#973D2F";
+        context.lineWidth = 2;
+        context.stroke();
+        context.closePath();
+
+        // right incline line
+        context.beginPath();
+        context.moveTo(440, 65);
+        context.lineTo(520, 140);
+        context.strokeStyle = "#973D2F";
+        context.lineWidth = 2;
+        context.stroke();
+        context.closePath();
+
+        // left curve line after incline
+        context.beginPath();
+        context.moveTo(180, 140); // starting point (left side)
+        context.quadraticCurveTo(220, 200, 240, 200); // curve
+        context.strokeStyle = "#973D2F";
+        context.lineWidth = 2;
+        context.stroke();
+        context.closePath();
+
+        context.beginPath();
+        context.moveTo(180, 140); // starting point (left side)
+        context.quadraticCurveTo(180, 140, 240, 200); // curve
+        context.strokeStyle = "#973D2F";
+        context.lineWidth = 2;
+        context.stroke();
+        context.closePath();
+
+        // right curve line after incline
+        context.beginPath();
+        context.moveTo(520, 140); // starting point (left side)
+        context.quadraticCurveTo(480, 200, 460, 200); // curve
+        context.strokeStyle = "#973D2F";
+        context.lineWidth = 2;
+        context.stroke();
+        context.closePath();
+
+        context.beginPath();
+        context.moveTo(520, 140); // starting point (left side)
+        context.quadraticCurveTo(520, 140, 460, 200); // curve
+        context.strokeStyle = "#973D2F";
+        context.lineWidth = 2;
+        context.stroke();
+        context.closePath();
+
+        // stright line left
+        context.beginPath();
+        context.moveTo(230, 140); // starting point (left side)
+        context.quadraticCurveTo(250, 265, 270, 390); // curve
+        context.strokeStyle = "#973D2F";
+        context.lineWidth = 2;
+        context.stroke();
+        context.closePath();
+
+        // stright line right
+        context.beginPath();
+        context.moveTo(470, 140); // starting point (left side)
+        context.quadraticCurveTo(435, 365, 430, 390); // curve
+        context.strokeStyle = "#973D2F";
+        context.lineWidth = 2;
+        context.stroke();
+        context.closePath();
+
+        // final incline line left
+        context.beginPath();
+        context.moveTo(270, 390); // starting point (left side)
+        context.lineTo(140, 690); // curve
+        context.strokeStyle = "#973D2F";
+        context.lineWidth = 3;
+        context.stroke();
+        context.closePath();
+
+        // final incline line right
+        context.beginPath();
+        context.moveTo(430, 390); // starting point (left side)
+        context.lineTo(530, 690); // curve
+        context.strokeStyle = "#973D2F";
+        context.lineWidth = 3;
+        context.stroke();
+        context.closePath();
+
+        // ****************** final curved zig zag *************************
+        context.beginPath();
+        context.moveTo(140, 690); // starting point (left side)
+        context.quadraticCurveTo(170, 710, 200, 690); // curve
+        context.strokeStyle = "#973D2F";
+        context.lineWidth = 2;
+        context.stroke();
+        context.closePath();
+
+        context.beginPath();
+        context.moveTo(200, 690); // starting point (left side)
+        context.quadraticCurveTo(240, 720, 280, 710); // curve
+        context.strokeStyle = "#973D2F";
+        context.lineWidth = 2;
+        context.stroke();
+        context.closePath();
+
+        context.beginPath();
+        context.moveTo(280, 710); // starting point (left side)
+        context.quadraticCurveTo(300, 720, 350, 710); // curve
+        context.strokeStyle = "#973D2F";
+        context.lineWidth = 2;
+        context.stroke();
+        context.closePath();
+
+        context.beginPath();
+        context.moveTo(350, 710); // starting point (left side)
+        context.quadraticCurveTo(380, 720, 410, 710); // curve
+        context.strokeStyle = "#973D2F";
+        context.lineWidth = 2;
+        context.stroke();
+        context.closePath();
+
+        context.beginPath();
+        context.moveTo(350, 710); // starting point (left side)
+        context.quadraticCurveTo(380, 720, 410, 710); // curve
+        context.strokeStyle = "#973D2F";
+        context.lineWidth = 2;
+        context.stroke();
+        context.closePath();
+
+        context.beginPath();
+        context.moveTo(410, 710); // starting point (left side)
+        context.quadraticCurveTo(450, 720, 480, 710); // curve
+        context.strokeStyle = "#973D2F";
+        context.lineWidth = 2;
+        context.stroke();
+        context.closePath();
+
+        context.beginPath();
+        context.moveTo(480, 710); // starting point (left side)
+        context.quadraticCurveTo(500, 720, 530, 690); // curve
+        context.strokeStyle = "#973D2F";
+        context.lineWidth = 2;
+        context.stroke();
+        context.closePath();
+
+        // *******************************************
+
+        // drawing designs
+        drawDiamond(context, 345, 440, 30, 35, "#0353a4");
+        drawCircle(315, 440, 3, "green", context);
+        drawCircle(298, 456, 3, "yellow", context);
+        drawCircle(315, 475, 3, "blue", context);
+        drawCircle(390, 456, 3, "yellow", context);
+        drawCircle(375, 440, 3, "green", context);
+        // drawCircle(345, 508, 3, "yellow", context);
+        drawCircle(345, 405, 3, "red", context);
+        drawCircle(375, 475, 3, "red", context);
+        drawCircle(362, 492, 3, "red", context);
+        drawCircle(362, 492, 3, "blue", context);
+        drawCircle(328, 492, 3, "green", context);
+        drawCircle(328, 422, 3, "green", context);
+        drawCircle(362, 422, 3, "red", context);
+
+        drawDiamond(context, 345, 512, 20, 20, "#0353a4");
+        drawDiamond(context, 345, 535, 20, 20, "pink");
+        drawDiamond(context, 345, 557, 20, 20, "green");
+        drawDiamond(context, 345, 577, 20, 20, "pink");
+        drawDiamond(context, 345, 597, 30, 35, "#0353a4");
+        drawDiamond(context, 345, 605, 15, 17.5, "red");
+        drawDiamond(context, 345, 632, 30, 35, "grey");
+        drawDiamond(context, 345, 667, 30, 35, "#0353a4");
+        drawDiamond(context, 345, 674, 15, 17.5, "red");
+
+        drawDiamond(context, 315, 632, 30, 35, "#0353a4");
+        drawDiamond(context, 315, 641, 15, 17.5, "red");
+        drawDiamond(context, 375, 632, 30, 35, "#0353a4");
+        drawDiamond(context, 375, 640, 15, 17.5, "red");
+        drawDiamond(context, 397, 640, 15, 20, "green");
+        drawDiamond(context, 411, 640, 15, 20, "green");
+        drawDiamond(context, 434, 632, 30, 35, "#0353a4");
+        drawDiamond(context, 434, 642, 15, 17.5, "red");
+        drawDiamond(context, 464, 632, 30, 35, "grey");
+        drawDiamond(context, 494, 632, 30, 35, "#0353a4");
+        drawDiamond(context, 494, 640, 15, 17.5, "red");
+
+        drawDiamond(context, 464, 598, 30, 35, "#0353a4");
+        drawDiamond(context, 464, 608, 15, 17.5, "red");
+
+        drawDiamond(context, 464, 667, 30, 35, "#0353a4");
+        drawDiamond(context, 464, 674, 15, 17.5, "red");
+
+        drawDiamond(context, 294, 640, 15, 20, "green");
+        drawDiamond(context, 279, 640, 15, 20, "green");
+        drawDiamond(context, 256, 632, 30, 35, "#0353a4");
+        drawDiamond(context, 256, 641, 15, 17.5, "red");
+        drawDiamond(context, 226, 632, 30, 35, "grey");
+
+        drawDiamond(context, 196, 632, 30, 35, "#0353a4");
+        drawDiamond(context, 196, 641, 15, 17.5, "red");
+        drawDiamond(context, 226, 597, 30, 35, "#0353a4");
+        drawDiamond(context, 226, 607, 15, 17.5, "red");
+
+        drawDiamond(context, 226, 667, 30, 35, "#0353a4");
+        drawDiamond(context, 226, 675, 15, 17.5, "red");
+
+        drawCircle(256, 632, 3, "green", context);
+        drawCircle(196, 632, 3, "green", context);
+        drawCircle(180, 649, 3, "yellow", context);
+        drawCircle(196, 669, 3, "red", context);
+
+        drawCircle(226, 597, 3, "yellow", context);
+        drawCircle(210, 614, 3, "green", context);
+        drawCircle(242, 614, 3, "red", context);
+        drawCircle(196, 669, 3, "red", context);
+
+        drawCircle(256, 669, 3, "red", context);
+        drawCircle(316, 669, 3, "red", context);
+        drawCircle(316, 632, 3, "green", context);
+
+        drawCircle(376, 669, 3, "red", context);
+        drawCircle(376, 632, 3, "green", context);
+        drawCircle(434, 669, 3, "red", context);
+        drawCircle(434, 632, 3, "green", context);
+        drawCircle(494, 669, 3, "red", context);
+        drawCircle(494, 632, 3, "green", context);
+
+        drawCircle(226, 700, 3, "green", context);
+        drawCircle(210, 684, 3, "yellow", context);
+        drawCircle(327, 684, 3, "yellow", context);
+        drawCircle(446, 684, 3, "yellow", context);
+        drawCircle(482, 684, 3, "red", context);
+        drawCircle(363, 684, 3, "red", context);
+        drawCircle(242, 684, 3, "red", context);
+        drawCircle(346, 700, 3, "green", context);
+        drawCircle(464, 700, 3, "green", context);
+        drawCircle(494, 632, 3, "green", context);
+
+        drawRectangle(context, 280, 130, 20, 10, "#0353a4");
+        drawRectangle(context, 280, 140, 20, 10, "pink");
+        drawRectangle(context, 280, 150, 20, 10, "grey");
+        drawRectangle(context, 280, 160, 20, 10, "#0353a4");
+        drawRectangle(context, 280, 170, 20, 10, "pink");
+        drawRectangle(context, 280, 180, 20, 10, "grey");
+        drawRectangle(context, 280, 190, 20, 10, "#0353a4");
+        drawRectangle(context, 280, 200, 20, 10, "pink");
+        drawRectangle(context, 280, 210, 20, 10, "grey");
+        drawRectangle(context, 280, 220, 20, 10, "#0353a4");
+        drawRectangle(context, 280, 230, 20, 10, "pink");
+        drawRectangle(context, 280, 240, 20, 10, "grey");
+        drawRectangle(context, 280, 250, 20, 10, "#0353a4");
+        drawRectangle(context, 280, 260, 20, 10, "pink");
+        drawRectangle(context, 280, 270, 20, 10, "grey");
+        drawRectangle(context, 280, 280, 20, 10, "#0353a4");
+        drawRectangle(context, 280, 290, 20, 10, "pink");
+        drawRectangle(context, 280, 300, 20, 10, "grey");
+        drawRectangle(context, 280, 310, 20, 10, "#0353a4");
+        drawRectangle(context, 280, 320, 20, 10, "pink");
+        drawRectangle(context, 280, 330, 20, 10, "grey");
+        drawRectangle(context, 280, 340, 20, 10, "#0353a4");
+        drawRectangle(context, 280, 350, 20, 10, "pink");
+        drawRectangle(context, 280, 360, 20, 10, "grey");
+        drawRectangle(context, 280, 370, 20, 10, "#0353a4");
+        drawRectangle(context, 280, 380, 20, 10, "pink");
+
+        drawRectangle(context, 410, 130, 20, 10, "#0353a4");
+        drawRectangle(context, 410, 140, 20, 10, "pink");
+        drawRectangle(context, 410, 150, 20, 10, "grey");
+        drawRectangle(context, 410, 160, 20, 10, "#0353a4");
+        drawRectangle(context, 410, 170, 20, 10, "pink");
+        drawRectangle(context, 410, 180, 20, 10, "grey");
+        drawRectangle(context, 410, 190, 20, 10, "#0353a4");
+        drawRectangle(context, 410, 200, 20, 10, "pink");
+        drawRectangle(context, 410, 210, 20, 10, "grey");
+        drawRectangle(context, 410, 220, 20, 10, "#0353a4");
+        drawRectangle(context, 410, 230, 20, 10, "pink");
+        drawRectangle(context, 410, 240, 20, 10, "grey");
+        drawRectangle(context, 410, 250, 20, 10, "#0353a4");
+        drawRectangle(context, 410, 260, 20, 10, "pink");
+        drawRectangle(context, 410, 270, 20, 10, "grey");
+        drawRectangle(context, 410, 280, 20, 10, "#0353a4");
+        drawRectangle(context, 410, 290, 20, 10, "pink");
+        drawRectangle(context, 410, 300, 20, 10, "grey");
+        drawRectangle(context, 410, 310, 20, 10, "#0353a4");
+        drawRectangle(context, 410, 320, 20, 10, "pink");
+        drawRectangle(context, 410, 330, 20, 10, "grey");
+        drawRectangle(context, 410, 340, 20, 10, "#0353a4");
+        drawRectangle(context, 410, 350, 20, 10, "pink");
+        drawRectangle(context, 410, 360, 20, 10, "grey");
+        drawRectangle(context, 410, 370, 20, 10, "#0353a4");
+        drawRectangle(context, 410, 380, 20, 10, "pink");
+        // drawRectangle(context, 280, 200, 20, 10, "blue");
+        // drawRectangle(context, 280, 210, 20, 10, "pink");
+        // drawRectangle(context, 280, 220, 20, 10, "grey");
+        // drawRectangle(context, 280, 380, 10, 10, "grey");
+
+        // draw triple diamond
+        drawDiamond(context, 325, 150, 40, 40, "#0353a4");
+        drawDiamond(context, 325, 160, 20, 20, "yellow");
+        drawDiamond(context, 325, 165, 10, 10, "red");
+
+        // draw connecer diamond
+        drawDiamond(context, 325, 190, 10, 10, "pink");
+        drawDiamond(context, 325, 200, 10, 10, "pink");
+
+        // draw triple diamond
+        drawDiamond(context, 325, 210, 40, 40, "#0353a4");
+        drawDiamond(context, 325, 220, 20, 20, "yellow");
+        drawDiamond(context, 325, 225, 10, 10, "red");
+
+        // draw connecer diamond
+        drawDiamond(context, 325, 250, 10, 10, "pink");
+        drawDiamond(context, 325, 260, 10, 10, "pink");
+
+        // draw tripple diamond
+        drawDiamond(context, 325, 270, 40, 40, "#0353a4");
+        drawDiamond(context, 325, 280, 20, 20, "yellow");
+        drawDiamond(context, 325, 285, 10, 10, "red");
+
+        // draw connecer diamond
+        drawDiamond(context, 325, 310, 10, 10, "pink");
+        drawDiamond(context, 325, 320, 10, 10, "pink");
+
+        drawDiamond(context, 325, 330, 40, 40, "#0353a4");
+        drawDiamond(context, 325, 340, 20, 20, "yellow");
+        drawDiamond(context, 325, 345, 10, 10, "red");
+
+        // draw connecer diamond
+        drawDiamond(context, 325, 370, 10, 10, "pink");
+        drawDiamond(context, 325, 380, 10, 10, "pink");
+
+        // *******************************************lateral cnnector
+        drawDiamond(context, 350, 165, 10, 10, "pink");
+        drawDiamond(context, 360, 165, 10, 10, "pink");
+
+        drawDiamond(context, 350, 225, 10, 10, "pink");
+        drawDiamond(context, 360, 225, 10, 10, "pink");
+
+        drawDiamond(context, 350, 285, 10, 10, "pink");
+        drawDiamond(context, 360, 285, 10, 10, "pink");
+
+        drawDiamond(context, 350, 345, 10, 10, "pink");
+        drawDiamond(context, 360, 345, 10, 10, "pink");
+        // *******************************second pattern
+
+        // draw triple diamond
+        drawDiamond(context, 385, 150, 40, 40, "#0353a4");
+        drawDiamond(context, 385, 160, 20, 20, "yellow");
+        drawDiamond(context, 385, 165, 10, 10, "red");
+
+        // draw connecer diamond
+        drawDiamond(context, 385, 190, 10, 10, "pink");
+        drawDiamond(context, 385, 200, 10, 10, "pink");
+
+        // draw triple diamond
+        drawDiamond(context, 385, 210, 40, 40, "#0353a4");
+        drawDiamond(context, 385, 220, 20, 20, "yellow");
+        drawDiamond(context, 385, 225, 10, 10, "red");
+
+        // draw connecer diamond
+        drawDiamond(context, 385, 250, 10, 10, "pink");
+        drawDiamond(context, 385, 260, 10, 10, "pink");
+
+        // draw tripple diamond
+        drawDiamond(context, 385, 270, 40, 40, "#0353a4");
+        drawDiamond(context, 385, 280, 20, 20, "yellow");
+        drawDiamond(context, 385, 285, 10, 10, "red");
+
+        // draw connecer diamond
+        drawDiamond(context, 385, 310, 10, 10, "pink");
+        drawDiamond(context, 385, 320, 10, 10, "pink");
+
+        drawDiamond(context, 385, 330, 40, 40, "#0353a4");
+        drawDiamond(context, 385, 340, 20, 20, "yellow");
+        drawDiamond(context, 385, 345, 10, 10, "red");
+
+        // draw connecer diamond
+        drawDiamond(context, 385, 370, 10, 10, "pink");
+        drawDiamond(context, 385, 380, 10, 10, "pink");
+
+        // draw rectangle
+        drawRectangle(context, 340, 185, 30, 30, "#0353a4");
+        // drawRectangle(context, 348, 193, 15, 15, "pink");
+        drawCircle(348, 193, 4, "#FFFBF6", context);
+        drawCircle(348, 206, 4, "#FFFBF6", context);
+        drawCircle(361, 193, 4, "#FFFBF6", context);
+        drawCircle(361, 206, 4, "#FFFBF6", context);
+
+        drawRectangle(context, 340, 245, 30, 30, "#0353a4");
+        drawCircle(348, 253, 4, "#FFFBF6", context);
+        drawCircle(348, 266, 4, "#FFFBF6", context);
+        drawCircle(361, 253, 4, "#FFFBF6", context);
+        drawCircle(361, 266, 4, "#FFFBF6", context);
+
+        drawRectangle(context, 340, 305, 30, 30, "#0353a4");
+        drawCircle(348, 313, 4, "#FFFBF6", context);
+        drawCircle(348, 326, 4, "#FFFBF6", context);
+        drawCircle(361, 313, 4, "#FFFBF6", context);
+        drawCircle(361, 326, 4, "#FFFBF6", context);
+      });
+    </script>
+  </body>
+</html>

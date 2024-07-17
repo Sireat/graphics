@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Habesha Kemis Design</title>
+  <style>
+    canvas {
+      margin-left: 20px;
+      background-color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h1>By Sireat Mihretu ID: 1203295</h1>
+  </div>
+  <canvas id="habesha_dress"></canvas>
+  <script>
+    var vw = document.getElementById("habesha_dress");
+    var ctx = vw.getContext("2d");
+    var w = vw.width = window.innerWidth * 0.6;
+    var h = vw.height = window.innerHeight * 1.4;
+    ctx.fillStyle = "white";
+
+
+ // Draw green rectangle
+    ctx.fillStyle = "green";
+    ctx.fillRect(w / 2 - 100, 0, 75, h);
+
+    // Draw yellow rectangle
+    ctx.fillStyle = "yellow";
+    ctx.fillRect(w / 2 - 25, 0, 75, h);
+
+    // Draw red rectangle
+    ctx.fillStyle = "red";
+    ctx.fillRect(w / 2+25 , 0, 75, h);
+    
+    function sleep(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    async function drawDressDesign() {
+      var crossColors = ["#7E0307", "green", "yellow", "red", "yellow"];
+      var initialCrossSize = 60;
+
+      // Draw left crosses
+      var crossCenterX = w / 2 - 65;
+      var crossCenterY = 0;
+      for (var j = 0; j < 15; j++) {
+        var crossSize = initialCrossSize;
+        var outerCrossY = crossCenterY + j * 65;
+
+        for (var i = 0; i < 5; i++) {
+          ctx.beginPath();
+          // Horizontal part of the cross
+          ctx.moveTo(crossCenterX - crossSize / 2, outerCrossY - crossSize / 4);
+          ctx.lineTo(crossCenterX + crossSize / 2, outerCrossY - crossSize / 4);
+          ctx.lineTo(crossCenterX + crossSize / 2, outerCrossY + crossSize / 4);
+          ctx.lineTo(crossCenterX - crossSize / 2, outerCrossY + crossSize / 4);
+          ctx.closePath();
+          // Vertical part of the cross
+          ctx.moveTo(crossCenterX - crossSize / 4, outerCrossY - crossSize / 2);
+          ctx.lineTo(crossCenterX + crossSize / 4, outerCrossY - crossSize / 2);
+          ctx.lineTo(crossCenterX + crossSize / 4, outerCrossY + crossSize / 2);
+          ctx.lineTo(crossCenterX - crossSize / 4, outerCrossY + crossSize / 2);
+          ctx.closePath();
+          ctx.fillStyle = crossColors[i];
+          ctx.fill();
+          crossSize -= 10;
+        }
+        await sleep(100); // Delay for animation effect
+      }
+
+      // Draw right crosses
+      crossCenterX = w / 2 + 65;
+      for (var j = 0; j < 15; j++) {
+        var crossSize = initialCrossSize;
+        var outerCrossY = crossCenterY + j * 65;
+
+        for (var i = 0; i < 5; i++) {
+          ctx.beginPath();
+          // Horizontal part of the cross
+          ctx.moveTo(crossCenterX - crossSize / 2, outerCrossY - crossSize / 4);
+          ctx.lineTo(crossCenterX + crossSize / 2, outerCrossY - crossSize / 4);
+          ctx.lineTo(crossCenterX + crossSize / 2, outerCrossY + crossSize / 4);
+          ctx.lineTo(crossCenterX - crossSize / 2, outerCrossY + crossSize / 4);
+          ctx.closePath();
+          // Vertical part of the cross
+          ctx.moveTo(crossCenterX - crossSize / 4, outerCrossY - crossSize / 2);
+          ctx.lineTo(crossCenterX + crossSize / 4, outerCrossY - crossSize / 2);
+          ctx.lineTo(crossCenterX + crossSize / 4, outerCrossY + crossSize / 2);
+          ctx.lineTo(crossCenterX - crossSize / 4, outerCrossY + crossSize / 2);
+          ctx.closePath();
+          ctx.fillStyle = crossColors[i];
+          ctx.fill();
+          crossSize -= 10;
+        }
+        await sleep(100); // Delay for animation effect
+      }
+
+
+      // Draw diamonds
+      var diamondX = w / 2;
+      var initialDiamondY = 0;
+      var initialOuterRadius = 35;
+      var outerRadius = initialOuterRadius;
+      var innerRadius = outerRadius * 0.75;
+      var colors = ["green", "yellow", "red", "#FF1955", "#7E0307"];
+
+      for (var k = 0; k < 15; k++) {
+        var diamondY = initialDiamondY + k * 65;
+        outerRadius = initialOuterRadius;
+        innerRadius = outerRadius * 0.75;
+
+        for (var j = 0; j < colors.length; j++) {
+          ctx.fillStyle = colors[j];
+
+          ctx.beginPath();
+          for (var i = 0; i < 4; i++) {
+            var angle = (i * Math.PI) / 2;
+            var radius = i % 2 === 0 ? outerRadius : innerRadius;
+            var x = diamondX + Math.cos(angle) * radius;
+            var y = diamondY + Math.sin(angle) * radius;
+            ctx.lineTo(x, y);
+          }
+          ctx.closePath();
+          ctx.fill();
+          outerRadius *= 0.75;
+          innerRadius *= 0.75;
+        }
+        await sleep(100); // Delay for animation effect
+      }
+    }
+
+    drawDressDesign();
+
+  </script>
+</body>
+</html>
